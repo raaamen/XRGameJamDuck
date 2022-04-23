@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
+using UnityEngine.SceneManagement;
 
 
 public class GameManager : MonoBehaviour
@@ -13,11 +14,14 @@ public class GameManager : MonoBehaviour
 
     [SerializeField] private float timer = 30;
     [SerializeField] private bool gameOver;
+    [SerializeField] private bool gameWin;
     [SerializeField] private int eggsCollected;
+    [SerializeField] private UIManager uiManage;
 
     // Start is called before the first frame update
     void Start()
     {
+        uiManage = GetComponent<UIManager>();
         eggsCollected = 0;
     }
 
@@ -31,26 +35,31 @@ public class GameManager : MonoBehaviour
         if (timer <= 0)
         {
             Time.timeScale = 0;
-            gameOver = true;
+            GameOver();
         }
     }
 
     void GameOver()
     {
-        //lerp in you lose
-        //try again button
-        //insert UI elements
+        gameOver = true;
+        uiManage.GameOverPanel(gameWin);
         throw new NotImplementedException();
     }
 
     public void EggCollected()
     {
         eggsCollected++;
+        uiManage.increaseEggCountText(eggsCollected);
 
         //mass+= whatever mass
         //increase friction
 
         throw new NotImplementedException();
+    }
+
+    public void RestartGame()
+    {
+        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
     }
 
 }
