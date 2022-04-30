@@ -43,11 +43,11 @@ public class GameManager : MonoBehaviour
     {
         gameOver = true;
         uiManage.GameOverPanel(gameWin);
-        throw new NotImplementedException();
     }
 
     public void EggCollected()
     {
+        GameObject.Find("eggcollect").GetComponent<EffectScript>().triggerPress = true;
         eggsCollected+=1;
         //uiManage.increaseEggCountText(eggsCollected);
 
