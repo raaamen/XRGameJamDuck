@@ -15,7 +15,7 @@ public class GameManager : MonoBehaviour
     [SerializeField] private float timer = 30;
     [SerializeField] private bool gameOver;
     [SerializeField] private bool gameWin;
-    [SerializeField] private int eggsCollected;
+    public int eggsCollected;
     [SerializeField] private UIManager uiManage;
 
     // Start is called before the first frame update
@@ -48,8 +48,8 @@ public class GameManager : MonoBehaviour
 
     public void EggCollected()
     {
-        eggsCollected++;
-        uiManage.increaseEggCountText(eggsCollected);
+        eggsCollected+=1;
+        //uiManage.increaseEggCountText(eggsCollected);
 
         //mass+= whatever mass
         //increase friction
