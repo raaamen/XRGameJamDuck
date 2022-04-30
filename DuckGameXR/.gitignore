@@ -59,11 +59,6 @@ sysinfo.txt
 crashlytics-build.properties
 
 *.dwlt
-DuckGameXR/Logs/AssetImportWorker0.log
-DuckGameXR/Library/CurrentLayout-default.dwlt
-DuckGameXR/Logs/AssetImportWorker0.log
 *.log
-DuckGameXR/Library/CurrentLayout-default.dwlt
-DuckGameXR/Library/PackageManager/ProjectCache.md5
 *.dwlt
 *.md5
