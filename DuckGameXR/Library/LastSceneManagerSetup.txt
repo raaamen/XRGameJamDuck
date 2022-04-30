@@ -1,5 +1,25 @@
+<<<<<<< HEAD
 sceneSetups:
 - path: Assets/Scenes/LucaScene.unity
   isLoaded: 1
   isActive: 1
   isSubScene: 0
+=======
+<<<<<<< HEAD
+sceneSetups:
+- path: Assets/Scenes/MainScene.unity
+  isLoaded: 1
+  isActive: 1
+  isSubScene: 0
+=======
+<<<<<<< HEAD
+sceneSetups:
+- path: Assets/WCScenes/WyntaScene.unity
+  isLoaded: 1
+  isActive: 1
+  isSubScene: 0
+=======
+sceneSetups: []
+>>>>>>> 73a1b761a4c45d54025b4ade9dcd47aadab87b07
+>>>>>>> cdf90ef8be6354432dde70072d566b1f770bc941
+>>>>>>> e727720d4bce615e3be405801ac9924e4dd93e59

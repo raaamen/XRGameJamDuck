@@ -11,12 +11,13 @@ public class UIManager : MonoBehaviour
     [SerializeField] private GameObject gameOverPanel;
     [SerializeField] private TextMeshProUGUI gameOverText;
     [SerializeField] private GameObject timerText;
+    private TextMeshProUGUI timerTextT;
     [SerializeField] private TextMeshProUGUI eggCountText;
 
     // Start is called before the first frame update
     void Start()
     {
-        
+        timerTextT = timerText.GetComponent<TextMeshProUGUI>();
     }
 
     // Update is called once per frame
@@ -29,9 +30,16 @@ public class UIManager : MonoBehaviour
     {
         eggCountText.text = "You have " + num + "eggs.";
     }
+
+    public void changeTimer(float current)
+    {
+        timerTextT.text = current + " seconds left";
+    }
     
     public void GameOverPanel(bool win)
     {
+        timerText.SetActive(false);
+        gameOverPanel.SetActive(true);
         switch (win)
         {
             case true:
@@ -41,11 +49,5 @@ public class UIManager : MonoBehaviour
                 gameOverText.text = "You lose! :(";
                 break;
         }
-        while (gameOverPanel.transform.position!=Vector3.zero)
-        {
-            gameOverPanel.transform.position = Vector3.Lerp(gameOverPanel.transform.position, Vector3.zero, 1);
-        }
-        
     }
-
 }

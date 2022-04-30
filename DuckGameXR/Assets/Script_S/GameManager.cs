@@ -30,7 +30,7 @@ public class GameManager : MonoBehaviour
     {
         //timer decreases
         timer -= Time.deltaTime;
-
+        uiManage.changeTimer(timer);
         //if time gets to 0, game over
         if (timer <= 0)
         {
@@ -53,8 +53,6 @@ public class GameManager : MonoBehaviour
 
         //mass+= whatever mass
         //increase friction
-
-        throw new NotImplementedException();
     }
 
     public void RestartGame()
