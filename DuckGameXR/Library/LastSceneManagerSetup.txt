@@ -1,5 +1,5 @@
 sceneSetups:
-- path: Assets/Scenes/WyntaScene.unity
+- path: Assets/WCScenes/WyntaScene.unity
   isLoaded: 1
   isActive: 1
   isSubScene: 0
